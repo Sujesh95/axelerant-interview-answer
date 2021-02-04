@@ -1,0 +1,137 @@
+.header {
+    min-height: 6rem;
+    background-color: $bg-primary;
+    color: $color-primary;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+    @include responsive(phone){
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: none;
+
+        @include responsive(phone){
+            display: block;
+        }
+
+        &__bar {
+            width: 3rem;
+            height: .2rem;
+            background-color: white;
+            border-radius: 3px;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__logo-box {
+        flex: 0 0 40%;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+
+        @include responsive(tab-port){
+            flex: 0 0 25%;
+            text-align: center;
+        }
+
+        @include responsive(phone){
+            flex: 0 0 40%;
+            text-align: start;
+        }
+        
+        span:last-of-type {
+            color: $bg-secondary;
+        }
+
+    }
+
+    &__navigation {
+        flex: 1;
+        
+        @include responsive(phone){
+            display: none;
+        }
+
+        &--lists {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+
+            @include responsive(tab-port){
+                justify-content: center;
+            }
+        }
+
+        &--list-item {
+            &:not(:last-of-type) {
+                margin-right: 4.5rem;
+
+                @include responsive(tab-port){
+                    margin-right: 2.5rem;
+                }
+            }
+        }
+
+        &--list-item-link  {
+            display: block;
+            color: $color-tertiary;
+            text-decoration: none;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+    }
+
+    &__cta {
+        flex: 0 0 20%;
+       padding-left: 5rem;
+
+       @include responsive(tab-port){
+            flex: 0 0 30%;
+        }
+
+       @include responsive(phone){
+            display: none;
+        }
+
+        &-btn {
+            background-color: $bg-secondary;
+            border: none;
+            outline: none;
+            padding: .5rem 3rem;
+            border-radius: 100rem;
+            color: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            animation: pulsate .8s infinite;
+
+            img {
+                width: 1.5rem;
+                height: 1.5rem;
+                display: inline-block;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .comment-icon-mobile {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        margin-right: 1rem;
+        display: none;
+
+        @include responsive(phone){
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.footer {
+    min-height: 6rem;
+    background-color: $bg-primary;
+    color: $color-tertiary;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive(phone){
+        flex-direction: column;
+        padding: 1rem 0;
+        font-size: 2rem;
+    }
+
+    .copyright {
+        @include responsive(phone){
+            margin: 1rem 0;
+        }
+    }
+
+    .follow-us {
+        display: flex;
+    }
+
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        margin-right: .5rem;
+
+        &:first-of-type{
+            margin-left: 1rem;
+        }
+    }
+}

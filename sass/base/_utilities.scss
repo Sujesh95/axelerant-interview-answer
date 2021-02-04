@@ -1,0 +1,35 @@
+.u-padding-overall {
+    padding: 0 5rem;
+
+    @include responsive(phone){
+        padding: 0 2rem;
+    }
+
+    @include responsive(tab-port){
+        padding: 0 3rem;
+    }
+}
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-padding-top-large {
+    padding-top: 10rem;
+}
+
+.u-padding-bottom-medium {
+    padding-bottom: 5rem;
+}
+
+.u-grid-fill-column {
+    grid-column: 1 / -1;
+}
+
+.u-grid-second-column-place {
+    grid-column: 2 / 3;
+}
+
+.u-toggle-display {
+   height: auto !important;
+}

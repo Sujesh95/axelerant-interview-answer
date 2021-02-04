@@ -1,0 +1,291 @@
+.section-main {
+    background-image: linear-gradient(to bottom right, rgba(50, 50, 50, 0.88), rgba(50, 50, 50, 0.88)), url(../../images/1.png);
+    background-size: cover;
+    min-height: 85vh;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.service {
+    
+    @include absCenter;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include responsive(phone){
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8rem;
+    }
+
+    &__item {
+        border: .5px solid #615f5d;
+        border-radius: 5px;
+        padding: 3rem 5rem;
+        margin-right: 3rem;
+        transition: transform .3s;
+
+        @include responsive(phone){
+            display: flex;
+            align-items: center;
+            padding: .5rem;
+            width: 90%;
+            margin-right: 0;
+            margin-bottom: 1.3rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-3px);
+        }
+
+        img {
+            height: 7rem;
+            width: 7rem;
+
+            @include responsive(phone){
+                padding-left: 1rem;
+            }
+        }
+
+        p {
+            color: $color-primary;
+            font-size: 1.5rem;
+
+            @include responsive(phone){
+                font-size: 2rem;
+                padding-left: 1rem;
+            }
+        }
+    }
+}
+
+.section-about {
+    display: flex;
+
+    @include responsive(tab-port){
+        flex-direction: column;
+    }
+    
+    @include responsive(phone){
+        flex-direction: column;
+    }
+}
+
+.about {
+    flex: 0 0 50%;
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+}
+
+.about-content {
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: $color-tertiary;
+}
+
+
+.people-map {
+    flex: 0 0 50%;
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+
+    @include responsive(tab-port){
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    @include responsive(phone){
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    img {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.section-testimonials {
+    background-color: $bg-tertiary;
+    padding-bottom: 10rem;
+}
+
+.comment {
+    display: flex;
+
+    @include responsive(tab-port){
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 32%;
+
+        @include responsive(tab-port){
+            flex: 0 0 45%;
+        }
+
+        @include responsive(phone){
+            &:not(:first-of-type){
+                display: none;
+            }
+            flex: 1;
+        }
+
+        &:hover &--card {
+            transform: translateY(-5px);
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 3rem;
+
+            @include responsive(phone){
+                margin-right: 0;
+            }
+        }
+
+        &--card {
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+            font-size: 1.5rem;
+            padding: 2rem 4rem;
+            color: $color-tertiary;
+            border-radius: 10px;
+            position: relative;
+            background-color: white;
+            cursor: pointer;
+            transition: all .2s;
+            position: relative;
+
+            @include responsive(phone){
+                font-size: 2rem;
+            }
+
+            span {
+                border: 10px solid grey;
+                border-right-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                top: 100%;
+            }
+
+            &::after {
+                content: "\201C";
+                font-size: 4.8rem;
+                font-family: sans-serif;
+                color: $bg-secondary;
+                position: absolute;
+                top: 0;
+                left: 3.4rem;
+                font-weight: bold;
+
+                @include responsive(phone){
+                    top: .5rem;
+                }
+            }
+
+        }
+
+        &--content {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+
+                @include responsive(phone){
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            .client {
+                &__heading {
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+
+                    @include responsive(phone){
+                        font-size: 2rem;
+                    }
+                }
+                &__position {
+                    color: $color-tertiary;
+                    font-size: 1.1rem;
+
+                    @include responsive(phone){
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section-inputs {
+    background-image: linear-gradient(to bottom right, rgba(50, 50, 50, .9), rgba(50, 50, 50, .9)), url(../../images/7.png);
+    background-size: cover;
+    min-height: 50vh;
+    background-repeat: no-repeat;
+    padding: 6rem 0 8rem 0;
+
+    .user-question {
+        color: white;
+        text-align: center;
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+        padding-top: 2rem;
+        font-family: 'Myriad Pro Light', sans-serif;
+
+        @include responsive(phone){
+            padding: 2rem 3rem;
+            line-height: 1.4;
+        }
+    }
+
+    .company-declaration {
+        font-size: 1.8rem;
+        color: white;
+        text-align: center;
+        font-family: 'Myriad Pro Light', sans-serif;
+
+        @include responsive(phone){
+            padding: .5rem 3rem;
+            line-height: 1.4;
+            font-size: 2.1rem;
+        }
+    }
+
+    .user-form {
+        display: grid;
+        margin-top: 3.5rem;
+        grid-template-columns: repeat(3, 25rem);
+        grid-gap: 1.5rem;
+        justify-content: center;
+
+        @include responsive(tab-port){
+            grid-template-columns: repeat(3, 20rem);
+        }
+
+        & > * {
+            @include responsive(phone){
+                display: block;
+                margin: auto;
+                width: 90%;
+                margin-bottom: 3rem;
+            }
+        }
+
+        @include responsive(phone){
+            display: block;
+        }
+    }
+}

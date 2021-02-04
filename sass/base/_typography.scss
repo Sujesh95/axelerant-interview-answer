@@ -1,0 +1,25 @@
+.heading-primary {
+    font-size: 3.5rem;
+    color: $color-primary;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+
+    @include responsive(tab-port){
+        width: 90%;
+    }
+
+    @include responsive(phone){
+        width: 100%;
+        padding: 0 .3rem;
+        line-height: 1.1;
+    }
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    color: $color-secondary;
+    line-height: 1.1;
+}

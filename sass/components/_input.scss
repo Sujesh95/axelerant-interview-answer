@@ -1,0 +1,19 @@
+input {
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    background-color: white;
+    border: none;
+    font-family: inherit;
+    color: $color-tertiary;
+    outline: none;
+    transition: all .2s;
+    font-size: 1.5rem;
+
+    @include responsive(phone){
+        font-size: 2rem;
+    }
+
+    &:focus {
+        box-shadow: 0 2px 4px rgba($color: #000000, $alpha: .5);
+    }
+}
