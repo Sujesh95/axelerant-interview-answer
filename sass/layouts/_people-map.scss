@@ -1,0 +1,20 @@
+.people-map {
+    flex: 0 0 50%;
+    padding-top: 10rem;
+    padding-bottom: 7rem;
+
+    @include responsive(tab-port){
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    @include responsive(phone){
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+    }
+
+    img {
+        width: 90%;
+        height: 90%;
+    }
+}

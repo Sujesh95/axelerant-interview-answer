@@ -1,0 +1,115 @@
+.comment {
+    display: flex;
+
+    @include responsive(tab-port){
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 32%;
+
+        @include responsive(tab-port){
+            flex: 0 0 45%;
+        }
+
+        @include responsive(phone){
+            &:not(:first-of-type){
+                display: none;
+            }
+            flex: 1;
+        }
+
+        &:hover &--card {
+            transform: translateY(-5px);
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 3rem;
+
+            @include responsive(phone){
+                margin-right: 0;
+            }
+        }
+
+        &--card {
+            box-shadow: 0 2px 3px rgba(0, 0, 0, .3);
+            font-size: 1.5rem;
+            padding: 2rem 4rem;
+            color: $color-tertiary;
+            border-radius: 10px;
+            position: relative;
+            background-color: white;
+            cursor: pointer;
+            transition: all .2s;
+            position: relative;
+
+            @include responsive(phone){
+                font-size: 2rem;
+            }
+
+            span {
+                border: 10px solid grey;
+                border-right-color: transparent;
+                border-left-color: transparent;
+                border-bottom-color: transparent;
+                position: absolute;
+                top: 100%;
+            }
+
+            &::after {
+                content: "\201C";
+                font-size: 4.8rem;
+                font-family: sans-serif;
+                color: $bg-secondary;
+                position: absolute;
+                top: 0;
+                left: 3.4rem;
+                font-weight: bold;
+
+                @include responsive(phone){
+                    top: .5rem;
+                }
+            }
+
+        }
+
+        &--content {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 5rem;
+                height: 5rem;
+
+                @include responsive(phone){
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+
+            .client {
+                &__heading {
+                    text-transform: uppercase;
+                    font-size: 1.3rem;
+
+                    @include responsive(phone){
+                        font-size: 2rem;
+                    }
+                }
+                &__position {
+                    color: $color-tertiary;
+                    font-size: 1.1rem;
+
+                    @include responsive(phone){
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

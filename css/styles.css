@@ -270,12 +270,21 @@ textarea {
     .footer img:first-of-type {
       margin-left: 1rem; }
 
-.section-main {
-  background-image: linear-gradient(to bottom right, rgba(50, 50, 50, 0.88), rgba(50, 50, 50, 0.88)), url(../../images/1.png);
-  background-size: cover;
-  min-height: 85vh;
-  position: relative;
-  background-repeat: no-repeat; }
+.people-map {
+  flex: 0 0 50%;
+  padding-top: 10rem;
+  padding-bottom: 7rem; }
+  @media only screen and (max-width: 56.25em) {
+    .people-map {
+      padding-top: 3rem;
+      padding-bottom: 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .people-map {
+      padding-top: 3rem;
+      padding-bottom: 5rem; } }
+  .people-map img {
+    width: 90%;
+    height: 90%; }
 
 .service {
   position: absolute;
@@ -321,45 +330,6 @@ textarea {
         .service__item p {
           font-size: 2rem;
           padding-left: 1rem; } }
-
-.section-about {
-  display: flex; }
-  @media only screen and (max-width: 56.25em) {
-    .section-about {
-      flex-direction: column; } }
-  @media only screen and (max-width: 37.5em) {
-    .section-about {
-      flex-direction: column; } }
-
-.about {
-  flex: 0 0 50%;
-  padding-top: 10rem;
-  padding-bottom: 7rem; }
-
-.about-content {
-  margin-top: 3rem;
-  font-size: 2rem;
-  color: #6e6a68; }
-
-.people-map {
-  flex: 0 0 50%;
-  padding-top: 10rem;
-  padding-bottom: 7rem; }
-  @media only screen and (max-width: 56.25em) {
-    .people-map {
-      padding-top: 3rem;
-      padding-bottom: 5rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .people-map {
-      padding-top: 3rem;
-      padding-bottom: 5rem; } }
-  .people-map img {
-    width: 90%;
-    height: 90%; }
-
-.section-testimonials {
-  background-color: #f7f7f7;
-  padding-bottom: 10rem; }
 
 .comment {
   display: flex; }
@@ -443,6 +413,36 @@ textarea {
         @media only screen and (max-width: 37.5em) {
           .comment__box--content .client__position {
             font-size: 1.8rem; } }
+
+.section-main {
+  background-image: linear-gradient(to bottom right, rgba(50, 50, 50, 0.88), rgba(50, 50, 50, 0.88)), url(../../images/1.png);
+  background-size: cover;
+  min-height: 85vh;
+  position: relative;
+  background-repeat: no-repeat; }
+
+.section-about {
+  display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      flex-direction: column; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      flex-direction: column; } }
+
+.about {
+  flex: 0 0 50%;
+  padding-top: 10rem;
+  padding-bottom: 7rem; }
+
+.about-content {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #6e6a68; }
+
+.section-testimonials {
+  background-color: #f7f7f7;
+  padding-bottom: 10rem; }
 
 .section-inputs {
   background-image: linear-gradient(to bottom right, rgba(50, 50, 50, 0.9), rgba(50, 50, 50, 0.9)), url(../../images/7.png);
